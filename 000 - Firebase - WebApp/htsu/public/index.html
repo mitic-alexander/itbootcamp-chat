@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+    <title>ITBootcamp Chat</title>
+</head>
+<body>
+    <div id="chat_app">
+        <div id="header">
+            <h1>ITBootcamp Chat</h1>
+        </div>
+        <div id="chat_body">
+            <div id="chat_header">
+                <h2>Choose a chatroom</h2>
+            </div>
+            <div id="chatroom_button_div">
+                <button class="chatroom_buttons" id="general">#general</button>
+                <button class="chatroom_buttons" id="js">#js</button>
+                <button class="chatroom_buttons" id="homeworks">#homeworks</button>
+                <button class="chatroom_buttons" id="tests">#tests</button>
+            </div>
+            <div id="chat_area">
+                <button id="toTop_button"><img src="./feather-icons/arrow-up.svg" alt="Icon missing."></button>
+                <button id="toBottom_button"><img src="./feather-icons/arrow-down.svg" alt="Icon missing."></button>
+                <ul></ul>
+            </div>
+            <div>
+                <form id="message">
+                    <textarea name="message_input" id="message_input" cols="30" rows="3" form="message" placeholder="Write your message here."></textarea>
+                    <input type="submit" value="Send Message" id="message_button">
+                </form>
+                <form id="color_picker">
+                    <input type="color" name="color" id="color" value="#ffffff">
+                    <input type="submit" value="Update Color" id="color_button">
+                </form>
+                <form id="time_sorting">
+                    <input type="datetime-local" name="time_start" id="time_start">
+                    <input type="datetime-local" name="time_end" id="time_end">
+                    <input type="submit" value="Sort by Time" id="time_button">
+                </form>
+                <form id="username">
+                    <input type="text" name="username_input" id="username_input" placeholder="Update username." autocomplete="off">
+                    <input type="submit" value="Update Username" id="username_button">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+    <script src="firebaseConfig.js"></script>
+
+    <!-- MY SCRIPTS -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
